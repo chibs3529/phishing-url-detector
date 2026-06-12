@@ -69,7 +69,7 @@ def check_ip_address(parts):
 
 def check_url_shortener(parts):
     for shortener in URL_SHORTENERS:
-        if shortener in parts["domain"]:
+        if parts["domain"] == shortener or parts["domain"].endswith("." + shortener):
             return f"URL shortener detected ({shortener}) — may be hiding the real destination"
     return None
 
