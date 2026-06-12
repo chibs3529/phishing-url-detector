@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+.vscode/
+scan_results.txt
